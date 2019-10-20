@@ -1,0 +1,12 @@
+{
+    "name": "curso01/composer",
+    "description": "Curso Composer - Projeto teste",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "josemalcher",
+            "email": "contato@josemalcher.net"
+        }
+    ],
+    "require": {}
+}
