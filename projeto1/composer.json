@@ -10,5 +10,8 @@
             "name": "josemalcher",
             "email": "contato@josemalcher.net"
         }
-    ]
+    ],
+    "require": {
+        "php": ">5.5.5"
+    }
 }

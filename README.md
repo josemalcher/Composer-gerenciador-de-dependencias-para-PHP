@@ -28,6 +28,7 @@ Composer é um gerenciador de dependências para PHP. Composer é usado em todas
 
 ## <a name="parte1">1 - Introdução</a>
 
+- https://getcomposer.org/
 
 
 [Voltar ao Índice](#indice)
@@ -46,6 +47,11 @@ Composer é um gerenciador de dependências para PHP. Composer é usado em todas
 
 ## <a name="parte3">3 - Gerando o primeiro arquivo composer.json </a>
 
+
+```
+$ composer init
+
+```
 
 
 [Voltar ao Índice](#indice)
@@ -82,6 +88,23 @@ Composer é um gerenciador de dependências para PHP. Composer é usado em todas
 
 ## <a name="parte7">7 - Baixando depêndencias para o projeto com composer </a>
 
+```
+{
+    "name": "curso/projeto1",
+    "description": "Projeto 1 do curso de composer",
+    "require": {
+        "monolog/monolog": "^2.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "josemalcher",
+            "email": "contato@josemalcher.net"
+        }
+    ]
+}
+
+```
 
 
 [Voltar ao Índice](#indice)
@@ -91,7 +114,37 @@ Composer é um gerenciador de dependências para PHP. Composer é usado em todas
 
 ## <a name="parte8">8 - Aprendendo sobre require-dev, composer install e update </a>
 
+```
+{
+    "name": "curso/projeto1",
+    "description": "Projeto 1 do curso de composer",
+    "require": {
+        "monolog/monolog": "^2.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "josemalcher",
+            "email": "contato@josemalcher.net"
+        }
+    ],
+    "require": {
+        "php": ">5.5.5"
+    }
+}
 
+$ composer update
+
+Key require is a duplicate in ./composer.json at line 16
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 0 installs, 0 updates, 2 removals
+  - Removing psr/log (1.1.0)
+  - Removing monolog/monolog (2.0.0)
+Writing lock file
+Generating autoload files
+
+```
 
 [Voltar ao Índice](#indice)
 
