@@ -2,7 +2,8 @@
     "name": "curso/projeto1",
     "description": "Projeto 1 do curso de composer",
     "require": {
-        "monolog/monolog": "^2.0"
+        "monolog/monolog": "^2.0",
+        "php": ">5.5.5"
     },
     "license": "MIT",
     "authors": [
@@ -11,7 +12,7 @@
             "email": "contato@josemalcher.net"
         }
     ],
-    "require": {
-        "php": ">5.5.5"
+    "require-dev": {
+        "phpunit/phpunit":"^4.3"
     }
 }

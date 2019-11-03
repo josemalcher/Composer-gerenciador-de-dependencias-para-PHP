@@ -153,6 +153,29 @@ Generating autoload files
 
 ## <a name="parte9">9 - Resolvendo problema no require </a>
 
+```
+{
+    "name": "curso/projeto1",
+    "description": "Projeto 1 do curso de composer",
+    "require": {
+        "monolog/monolog": "^2.0",
+        "php": ">5.5.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "josemalcher",
+            "email": "contato@josemalcher.net"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit":"^7"
+    }
+}
+
+
+
+```
 
 
 [Voltar ao Índice](#indice)
@@ -162,7 +185,24 @@ Generating autoload files
 
 ## <a name="parte10">10 - Testando o monolog na prática </a>
 
+```php
+<?php
 
+require_once './vendor/autoload.php';
+
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+use Monolog\Handler\FirePHPHandler;
+
+// Create the logger
+$logger = new Logger('my_logger');
+// Now add some handlers
+$logger->pushHandler(new StreamHandler(__DIR__.'/logs/my_app.log', Logger::DEBUG));
+$logger->pushHandler(new FirePHPHandler());
+
+// You can now use your logger
+$logger->info('My logger is now ready');
+```
 
 [Voltar ao Índice](#indice)
 
