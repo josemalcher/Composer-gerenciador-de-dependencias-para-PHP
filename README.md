@@ -220,7 +220,9 @@ $logger->info('My logger is now ready');
 
 ## <a name="parte12">12 - Removendo pacotes </a>
 
+- composer remove aharen/pay
 
+Ou Removendo de composer.json + composer update
 
 [Voltar ao Índice](#indice)
 
@@ -229,7 +231,10 @@ $logger->info('My logger is now ready');
 
 ## <a name="parte13">13 - Entendendo versões no composer </a>
 
-
+- ^4.5 >= 4.5 <= 5
+- ^1.22 >= 1.22 <= 22
+- >2 < 3
+- >5.0.*
 
 [Voltar ao Índice](#indice)
 
@@ -238,7 +243,27 @@ $logger->info('My logger is now ready');
 
 ## <a name="parte14">14 - Travamento de versões </a>
 
+```
+{
+    "name": "curso/projeto1",
+    "description": "Projeto 1 do curso de composer",
+    "require": {
+        "monolog/monolog": "@stable",
+        "php": ">5.5.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "josemalcher",
+            "email": "contato@josemalcher.net"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit":"^4.3"
+    }
+}
 
+```
 
 [Voltar ao Índice](#indice)
 
@@ -247,6 +272,49 @@ $logger->info('My logger is now ready');
 
 ## <a name="parte15">15 - Caminhos personalizados</a>
 
+- composer update --no-dev
+
+```
+$ composer update --no-dev   
+Loading composer repositories with package information
+Updating dependencies
+Nothing to install or update
+Package operations: 0 installs, 0 updates, 22 removals
+  - Removing webmozart/assert (1.5.0)
+  - Removing symfony/yaml (v3.4.33)
+  - Removing symfony/polyfill-ctype (v1.12.0)
+  - Removing sebastian/version (1.0.6)
+  - Removing sebastian/recursion-context (1.0.5)
+  - Removing sebastian/global-state (1.1.1)
+  - Removing sebastian/exporter (1.2.2)
+  - Removing sebastian/environment (1.3.8)
+  - Removing sebastian/diff (1.4.3)
+  - Removing sebastian/comparator (1.2.4)
+  - Removing phpunit/phpunit-mock-objects (2.3.8)
+  - Removing phpunit/phpunit (4.8.36)
+  - Removing phpunit/php-token-stream (1.4.12)
+  - Removing phpunit/php-timer (1.0.9)
+  - Removing phpunit/php-text-template (1.2.1)
+  - Removing phpunit/php-file-iterator (1.4.5)
+  - Removing phpunit/php-code-coverage (2.2.4)
+  - Removing phpspec/prophecy (1.9.0)
+  - Removing phpdocumentor/type-resolver (1.0.1)
+  - Removing phpdocumentor/reflection-docblock (4.3.2)
+  - Removing phpdocumentor/reflection-common (2.0.0)
+  - Removing doctrine/instantiator (1.2.0)
+Generating autoload files
+
+```
+
+```
+$ composer update --no-dev
+Loading composer repositories with package information
+Updating dependencies
+Package operations: 2 installs, 0 updates, 0 removals
+  - Installing psr/log (1.1.2): Loading from cache
+  - Installing monolog/monolog (2.0.0): Loading from cache
+Generating autoload files
+```
 
 
 [Voltar ao Índice](#indice)
